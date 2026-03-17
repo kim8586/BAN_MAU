@@ -437,7 +437,10 @@ if (!entriesSnap.empty) {
 
   if (first.owner && first.owner !== user.uid) {
 
-    const ok = window.confirm("Kiểm tra lại nếu đúng Lớp/Môn bạn dạy thì chọn OK. Còn không thì chọn Hủy");
+    const ok = window.confirm(
+  `⚠️ Môn này đang do "${first.ownerName || 'giáo viên khác'}" phụ trách.\n\nBạn có muốn nhận quyền để chỉnh sửa không?`
+);
+
 
     if (!ok) {
       setIsSaving(false);

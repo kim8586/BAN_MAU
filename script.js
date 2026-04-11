@@ -1086,7 +1086,7 @@ style={{padding:"8px 12px",cursor:"pointer",color:"red"}}
                 <SectionBox label="🏫 Lớp học" items={classes} selectedId={selectedClassId} onSelect={setSelectedClassId} type="class" />
                 <SectionBox label="📆 Tháng" items={months} selectedId={selectedMonthId} onSelect={setSelectedMonthId} type="month" />
                 {viewMode === 'subject' ? (
-                  <SectionBox label="📚 Môn học" items={subjects} selectedId={selectedSubId} onSelect={setSelectedSubId} type="subject" />
+                  <SectionBox label="📚 Môn học/hđgd" items={subjects} selectedId={selectedSubId} onSelect={setSelectedSubId} type="subject" />
                 ) : systemMode === 'vnedu' ? (
                   <SectionBox label={viewMode === 'quality' ? '⭐ Chọn Phẩm chất' : (viewMode === 'competency' ? '🧠 Chọn NL Chung' : '👤 Chọn NL Đặc thù')} items={viewMode === 'quality' ? QUALITY_CRITERIA : (viewMode === 'competency' ? GENERAL_COMPETENCIES : SPECIFIC_COMPETENCIES)} selectedId={selectedCriteriaId} onSelect={setSelectedCriteriaId} type="system_comp" />
                 ) : (
